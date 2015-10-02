@@ -1,0 +1,30 @@
+[   25.146088] audit: type=1400 audit(1441071731.546:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=445 comm="apparmor_parser"
+[   25.146272] audit: type=1400 audit(1441071731.546:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=445 comm="apparmor_parser"
+[   25.190329] audit: type=1400 audit(1441071731.590:5): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/sbin/dhclient" pid=454 comm="apparmor_parser"
+[   25.190530] audit: type=1400 audit(1441071731.590:6): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=454 comm="apparmor_parser"
+[   25.190695] audit: type=1400 audit(1441071731.590:7): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=454 comm="apparmor_parser"
+[   27.206046] UDF-fs: INFO Mounting volume 'rd_rdfe_stable.150826-1427', timestamp 2015/09/01 01:40 (1000)
+[   28.762963] UDF-fs: INFO Mounting volume 'rd_rdfe_stable.150826-1427', timestamp 2015/09/01 01:40 (1000)
+[   29.134963] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   49.691239] EXT4-fs (sda1): resizing filesystem from 524032 to 7679744 blocks
+[   49.956659] EXT4-fs (sda1): resized filesystem to 7679744
+[   53.088690] init: failsafe main process (1075) killed by TERM signal
+[   54.028416] audit: type=1400 audit(1441071760.422:8): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/sbin/dhclient" pid=1247 comm="apparmor_parser"
+[   54.028424] audit: type=1400 audit(1441071760.422:9): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=1247 comm="apparmor_parser"
+[   54.028429] audit: type=1400 audit(1441071760.422:10): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=1247 comm="apparmor_parser"
+[   54.028763] audit: type=1400 audit(1441071760.422:11): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=1247 comm="apparmor_parser"
+[   54.028766] audit: type=1400 audit(1441071760.422:12): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=1247 comm="apparmor_parser"
+[   54.028941] audit: type=1400 audit(1441071760.422:13): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=1247 comm="apparmor_parser"
+[   54.537175] audit: type=1400 audit(1441071760.930:14): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/tcpdump" pid=1249 comm="apparmor_parser"
+[   56.618688] init: plymouth-upstart-bridge main process ended, respawning
+[   58.372159] EXT4-fs (sdb1): mounted filesystem with ordered data mode. Opts: (null)
+[  663.469304] init: walinuxagent main process (823) killed by TERM signal
+[  719.557302] audit: type=1400 audit(1441072425.956:15): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/sbin/dhclient" pid=5127 comm="apparmor_parser"
+[  719.557532] audit: type=1400 audit(1441072425.956:16): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=5127 comm="apparmor_parser"
+[  719.557698] audit: type=1400 audit(1441072425.956:17): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=5127 comm="apparmor_parser"
+[  719.757102] audit: type=1400 audit(1441072426.156:18): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/sbin/tcpdump" pid=5129 comm="apparmor_parser"
+[  720.172995] audit: type=1400 audit(1441072426.572:19): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/sbin/dhclient" pid=5192 comm="apparmor_parser"
+[  720.173259] audit: type=1400 audit(1441072426.572:20): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=5192 comm="apparmor_parser"
+[  720.173455] audit: type=1400 audit(1441072426.572:21): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=5192 comm="apparmor_parser"
+[  720.415327] audit: type=1400 audit(1441072426.812:22): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/sbin/tcpdump" pid=5194 comm="apparmor_parser"
+[  738.000026] UDF-fs: INFO Mounting volume 'rd_rdfe_stable.150826-1427', timestamp 2015/09/01 01:40 (1000)

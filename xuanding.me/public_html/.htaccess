@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^test/?$ e.html
+RewriteRule ^.*about$ explore/historynav/about.html
+RewriteRule ^.*contact$ explore/historynav/contact.html

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AJAX-Based Navigation</title>
+        <meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <style>
+            @media (min-width: 768px) {
+                .container {
+                    max-width: 730px;
+                }
+            }
+            .header {
+                margin-top: 30px;
+                border-bottom: 1px solid #EEE;
+            }
+            .header h2 {
+                margin-top: 0;
+                line-height: 40px;
+            }
+            #stage {
+                padding: 15px;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script>
+            function stageContent(content) {
+                $("#stage").html(content);
+            }
+            
+            $(function(){
+                $.get("home.html", stageContent);
+                
+                $("nav[role=navigation] a").click(function(e) {
+                    e.preventDefault();
+                    
+                    var request = $(this).attr("href");
+                    
+                    if (request == "about") {
+                        $.get("about.html", stageContent);
+                    }
+                    else if (request == "contact") {
+                        $.get("contact.html", stageContent);
+                    }
+                    else {
+                        $.get("home.html", stageContent);
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header clearfix">
+                <nav role="navigation">
+                    <ul class="nav nav-pills pull-right">
+                        <li><a href="./">Home</a></li>
+                        <li><a href="about">About</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <h2 class="text-muted">AJAX Navigation</h2>
+            </div>
+            <div id="stage"></div>
+        </div>
+    </body>
+</html>

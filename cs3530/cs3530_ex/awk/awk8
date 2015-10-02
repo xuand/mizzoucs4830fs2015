@@ -1,0 +1,9 @@
+{ 
+    printf "$1 = %g ", $1
+    printf "exp = %.2g ", exp($1); 
+    printf "log = %.2g ", log($1); 
+    printf "sqrt = %.2g ", sqrt($1); 
+    printf "int = %d ", int($1);
+    printf "substr( %s,1,2) = %s \n", $2, substr( $2,1,2); 
+ } 
+

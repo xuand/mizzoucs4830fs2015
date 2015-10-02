@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title id="title"></title>
+        <meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <style>
+            @media (min-width: 768px) {
+                .container {
+                    max-width: 730px;
+                }
+            }
+            .header {
+                margin-top: 30px;
+                border-bottom: 1px solid #EEE;
+            }
+            .header h2 {
+                margin-top: 0;
+                line-height: 40px;
+            }
+            #stage {
+                padding: 15px;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="http://www.yourwebsite.com/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
+        <script>
+            function stageContent(content) {
+                $("#stage").html(content);
+            }
+
+            var title = document.getElementById('title');
+            function evaluatePath(path) {
+                // Clean up the endpoint
+                var request = path.split("/").pop();
+                // Request the content
+                if (request == "about") {
+                    $.get("about.html", stageContent);
+                    title.innerHTML = "about";
+                }
+                else if (request == "contact") {
+                    $.get("contact.html", stageContent);
+                    title.innerHTML = "contact";
+                }
+                else {
+                    $.get("home.html", stageContent);
+                    title.innerHTML = "home";
+                }
+            }
+
+
+            $(function(){
+                // Evaluate path to start
+                evaluatePath(location.pathname);
+
+                // When a link is clicked...
+                $("nav[role=navigation] a").click(function(e) {
+                    // Don't follow its href
+                    e.preventDefault();
+
+                    // Instead remember its href
+                    var request = $(this).attr("href");
+                    $("li").attr("class","");
+                    if(request.split("/").pop() == "about")
+                        $("#about").attr("class","active");
+                    else if(request.split("/").pop() == "contact")
+                        $("#contact").attr("class","active");
+                    else if(request.split("/").pop() == "")
+                        $("#home").attr("class","active");
+
+                    // And add it to the browser's history
+                    history.pushState(null, null, request);
+
+                    // Then evaluate it
+                    evaluatePath(request);
+
+                });
+
+
+                // If the back button is pressed...
+                $(window).on("popstate", function() {
+                    evaluatePath(location.pathname);
+                });
+
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+
+            <!-- HEADER -->
+            <div class="header clearfix">
+                <nav role="navigation">
+                    <ul class="nav nav-pills pull-right">
+                        <li id="home"><a href="./">Home</a></li>
+                        <li id="about"><a href="./about">About</a></li>
+                        <li id="contact"><a href="./contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <h2 class="text-muted">AJAX Navigation</h2>
+            </div>
+
+            <!-- STAGE -->
+            <div id="stage">
+                <noscript>
+                    <h2>Welcome to the home page.</h2>
+                    <p>Thank you for stopping by.</p>
+                </noscript>
+            </div>
+
+        </div>
+    </body>
+</html>
